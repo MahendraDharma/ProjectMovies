@@ -1,0 +1,64 @@
+{
+    "name": "mahendradharma/projectmovies",
+    "description": "Use native PHP file functions on Flysystem v3 filesystems by registering them as custom stream protocols.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "flysystem",
+        "stream-wrapper",
+        "filesystem",
+        "virtual-filesystem",
+        "abstraction"
+    ],
+    "authors": [
+        {
+            "name": "Mahendra Dharma",
+            "homepage": "https://github.com/MahendraDharma"
+        }
+    ],
+    "homepage": "https://github.com/MahendraDharma/ProjectMovies",
+    "readme": "README.md",
+    "require": {
+        "php": "^8.1",
+        "league/flysystem": "^3.0",
+        "psr/log": "^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "league/flysystem-memory": "^3.31",
+        "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0",
+        "phpstan/phpstan": "^2.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "suggest": {
+        "league/flysystem-memory": "In-memory adapter, handy for tests",
+        "league/flysystem-ziparchive": "ZIP archive adapter",
+        "monolog/monolog": "PSR-3 logger implementation"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProjectMovies\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ProjectMovies\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse",
+        "cs": "php-cs-fixer check",
+        "cs:fix": "php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "support": {
+        "issues": "https://github.com/MahendraDharma/ProjectMovies/issues",
+        "source": "https://github.com/MahendraDharma/ProjectMovies"
+    }
+}
